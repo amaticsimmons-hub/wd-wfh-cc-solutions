@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>W&amp;D Business Solutions - Work From Home Call Center Opportunities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Optional Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #00468c;
+      --blue-dark: #002a4f;
+      --yellow: #f5be00;
+      --white: #ffffff;
+      --text-dark: #222222;
+      --text-light: #ffffff;
+      --bg-light: #f5f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout Helpers */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #e0e3eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 0;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      height: 44px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--blue-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        linear-gradient(rgba(0, 70, 140, 0.9), rgba(0, 70, 140, 0.9)),
+        url("4.png") center/cover no-repeat;
+      color: var(--text-light);
+      padding: 4.5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-heading {
+      font-family: "Montserrat", sans-serif;
+      font-size: clamp(2.2rem, 3vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subheading {
+      font-size: 1rem;
+      max-width: 32rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--blue-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-secondary {
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .hero-right {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-right h3 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-list {
+      font-size: 0.9rem;
+      list-style: none;
+    }
+
+    .hero-list li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+
+    /* Trusted / Experience */
+    .trusted {
+      background: var(--white);
+      padding: 2.5rem 0;
+      border-bottom: 1px solid #e0e3eb;
+    }
+
+    .trusted-title {
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #666;
+      margin-bottom: 1.2rem;
+    }
+
+    .trusted-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--blue-dark);
+    }
+
+    .trusted-item {
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: var(--bg-light);
+      border: 1px solid #dde2f1;
+    }
+
+    /* Generic sections */
+    .section {
+      padding: 3.5rem 0;
+    }
+
+    .section-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: var(--blue-dark);
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #666666;
+      margin-bottom: 2rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .about-list li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .check {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--yellow);
+      display: inline-block;
+    }
+
+    .about-image {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Work From Home Section */
+    .wfh-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .wfh-list {
+      list-style: none;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .wfh-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.4rem;
+      align-items: flex-start;
+    }
+
+    .bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      margin-top: 0.35rem;
+      flex-shrink: 0;
+    }
+
+    /* Services */
+    .services {
+      background: var(--bg-light);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 1.3rem 1.2rem;
+      border: 1px solid #dde2f1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .service-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--blue-dark);
+    }
+
+    .service-text {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .service-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #777;
+    }
+
+    /* Industries */
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .industry-card {
+      border-radius: 0.9rem;
+      border: 1px solid #dde2f1;
+      padding: 1.2rem 1.1rem;
+      background: var(--white);
+    }
+
+    .industry-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 0.3rem;
+    }
+
+    .industry-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--blue-dark);
+    }
+
+    .industry-text {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--blue);
+      color: var(--text-light);
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .cta-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+
+    .cta-text {
+      font-size: 0.95rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .cta-card {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 1rem;
+      padding: 1.3rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .cta-card label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.3rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Contact */
+    #contact {
+      padding-top: 4rem;
+      margin-top: -4rem;
+    }
+
+    .contact-section {
+      padding: 3rem 0 3.5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.4rem;
+      border: 1px solid #cdd3e3;
+      font-family: inherit;
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--blue-dark);
+      color: var(--text-light);
+      padding: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .wfh-grid,
+      .cta-inner,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 3.5rem;
+      }
+
+      .hero-right {
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav {
+        gap: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <!-- 1.png: logo file -->
+        <img src="1.png" alt="W&amp;D Business Solutions logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#wfh">Work From Home</a>
+        <a href="#services">Solutions</a>
+        <a href="#industries">Industries</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#wfh" class="nav-cta">Work From Home Jobs</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="hero-heading">Work From Home Call Center Opportunities &amp; Business Solutions</h1>
+        <p class="hero-subheading">
+          W&amp;D Business Solutions connects motivated agents with flexible work from home call center opportunities,
+          while supplying professional call center services to insurance, travel, towing, and medical billing companies.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">Remote call center work</div>
+          <div class="badge">Flexible scheduling</div>
+          <div class="badge">Partnered with Arise® Platform</div>
+        </div>
+
+        <div class="hero-buttons">
+          <!-- Primary external link to Arise -->
+          <a href="https://www.arise.com" target="_blank" rel="noopener" class="btn-primary">
+            Explore Work From Home Opportunities
+          </a>
+
+          <!-- Secondary: could be your own info page or email -->
+          <a href="#wfh" class="btn-secondary">
+            Learn How Remote Work With W&amp;D Works
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <h3>Trusted Call Center Supplier</h3>
+        <ul class="hero-list">
+          <li><span class="hero-dot"></span><span>Insurance companies such as Progressive Insurance</span></li>
+          <li><span class="hero-dot"></span><span>Travel agencies and cruise lines such as Princess Cruise Lines</span></li>
+          <li><span class="hero-dot"></span><span>Local towing companies that need dependable dispatch</span></li>
+          <li><span class="hero-dot"></span><span>Medical billing agencies requiring clear, compliant communication</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Trusted / Experience Strip -->
+  <section class="trusted">
+    <div class="container">
+      <div class="trusted-title">Supplying Call Center Solutions For</div>
+      <div class="trusted-logos">
+        <div class="trusted-item">Insurance Providers</div>
+        <div class="trusted-item">Travel &amp; Cruise Agencies</div>
+        <div class="trusted-item">Local Towing Companies</div>
+        <div class="trusted-item">Medical Billing Agencies</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work From Home Focus Section -->
+  <section id="wfh" class="section">
+    <div class="container wfh-grid">
+      <div>
+        <h2 class="section-title">Work From Home With W&amp;D Business Solutions</h2>
+        <p class="section-subtitle">
+          Build a flexible work from home career providing customer support for well-known brands through the Arise® Platform.
+        </p>
+
+        <p>
+          As a remote call center professional, you can work from the comfort of your home, choose which clients you service,
+          and set a schedule that fits your life and your family.
+        </p>
+
+        <ul class="wfh-list">
+          <li><span class="bullet"></span>
+            <span>Work as an independent contractor from your home office.</span>
+          </li>
+          <li><span class="bullet"></span>
+            <span>Choose from multiple client programs through the Arise® Platform.</span>
+          </li>
+          <li><span class="bullet"></span>
+            <span>Provide inbound customer service, sales, or support – no daily commute.</span>
+          </li>
+          <li><span class="bullet"></span>
+            <span>Set your own schedule in blocks that work for your lifestyle.</span>
+          </li>
+          <li><span class="bullet"></span>
+            <span>Use your communication skills to help customers in insurance, travel, towing, and healthcare-related services.</span>
+          </li>
+        </ul>
+
+        <div class="hero-buttons" style="margin-top:1.5rem;">
+          <a href="https://www.arise.com" target="_blank" rel="noopener" class="btn-primary">
+            Go To Arise.com
+          </a>
+          <a href="mailto:info@wdbusinesssolutions.com" class="btn-secondary">
+            Email W&amp;D About Remote Opportunities
+          </a>
+        </div>
+      </div>
+
+      <div class="about-image">
+        <!-- 2.png: diverse remote call center image -->
+        <img src="2.png" alt="Person working from home as a call center agent" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About W&D as a Supplier -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2 class="section-title">About W&amp;D Business Solutions</h2>
+        <p>
+          W&amp;D Business Solutions is both a call center supplier for businesses and a connector for individuals seeking
+          legitimate work from home opportunities in customer support.
+        </p>
+        <p>
+          We help companies deliver reliable, friendly, and efficient communication at scale, while offering remote agents
+          the chance to grow their skills and income from home.
+        </p>
+
+        <ul class="about-list">
+          <li><span class="check"></span><span>Professional call handling for multiple industries</span></li>
+          <li><span class="check"></span><span>Work from home opportunities via the Arise® Platform</span></li>
+          <li><span class="check"></span><span>Focus on quality service, clear communication, and customer care</span></li>
+        </ul>
+      </div>
+
+      <div class="about-image">
+        <!-- 3.png: another diverse call center / remote image -->
+        <img src="3.png" alt="Team of diverse call center professionals" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Solutions -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="section-title">Our Call Center Solutions</h2>
+      <p class="section-subtitle">
+        We design call center support around your customers, your compliance needs, and your business growth goals.
+      </p>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-tag">Core Service</div>
+          <h3 class="service-title">Inbound Customer Support</h3>
+          <p class="service-text">
+            We manage incoming calls, questions, and support requests so your internal teams can focus on core operations.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-tag">Core Service</div>
+          <h3 class="service-title">Outbound Campaigns</h3>
+          <p class="service-text">
+            Professional outbound calls for renewals, follow-ups, surveys, and lead nurturing that align with your brand voice.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-tag">Insurance</div>
+          <h3 class="service-title">Insurance Policy Support</h3>
+          <p class="service-text">
+            Clear, compliant support for insurance companies, including partners such as Progressive Insurance.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-tag">Travel</div>
+          <h3 class="service-title">Travel &amp; Cruise Line Support</h3>
+          <p class="service-text">
+            Flexible call handling for travel agencies and cruise providers, including Princess Cruise Lines.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-tag">Towing</div>
+          <h3 class="service-title">Towing &amp; Dispatch Lines</h3>
+          <p class="service-text">
+            Fast, calm, and accurate call management for local towing companies that need 24/7 dispatch readiness.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-tag">Medical</div>
+          <h3 class="service-title">Medical Billing Call Handling</h3>
+          <p class="service-text">
+            Professional support for medical billing agencies, handling patient questions and statements with care and clarity.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section id="industries" class="section">
+    <div class="container">
+      <h2 class="section-title">Industries We Serve</h2>
+      <p class="section-subtitle">
+        W&amp;D Business Solutions has supplied call center teams for a range of industries that rely on clear, dependable communication.
+      </p>
+
+      <div class="industries-grid">
+        <article class="industry-card">
+          <div class="industry-label">Insurance</div>
+          <h3 class="industry-title">Insurance Companies</h3>
+          <p class="industry-text">
+            Policy questions, claims updates, and customer education for carriers such as Progressive Insurance.
+          </p>
+        </article>
+
+        <article class="industry-card">
+          <div class="industry-label">Travel</div>
+          <h3 class="industry-title">Travel &amp; Cruise Lines</h3>
+          <p class="industry-text">
+            Booking support, itinerary changes, and travel updates for agencies and cruise lines such as Princess Cruise Lines.
+          </p>
+        </article>
+
+        <article class="industry-card">
+          <div class="industry-label">Automotive</div>
+          <h3 class="industry-title">Local Towing Companies</h3>
+          <p class="industry-text">
+            Calm, efficient call handling for drivers in stressful situations, plus streamlined dispatch communication.
+          </p>
+        </article>
+
+        <article class="industry-card">
+          <div class="industry-label">Healthcare</div>
+          <h3 class="industry-title">Medical Billing Agencies</h3>
+          <p class="industry-text">
+            Transparent and compliant communication about balances, statements, and billing questions.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA: Work From Home & Business Contact -->
+  <section class="section cta">
+    <div class="container cta-inner">
+      <div>
+        <h2 class="cta-title">Start Your Work From Home Journey or Scale Your Call Center</h2>
+        <p class="cta-text">
+          Whether you’re looking to work remotely as a call center professional or you need a reliable partner to handle
+          your customer communication, W&amp;D Business Solutions is here to help.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="https://www.arise.com" target="_blank" rel="noopener" class="btn-primary">
+            View Work From Home Opportunities on Arise.com
+          </a>
+          <a href="#contact" class="btn-secondary">
+            Contact W&amp;D Business Solutions
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-card">
+        <label>Work From Home Focus</label>
+        <p>Remote customer support roles via the Arise® Platform, with flexible scheduling and multiple client options.</p>
+
+        <label style="margin-top:0.8rem;">Business Inquiries</label>
+        <p>Email: info@wdbusinesssolutions.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="section-title">Contact W&amp;D Business Solutions</h2>
+        <p class="section-subtitle">
+          Use the form below for business inquiries or questions about work from home opportunities. Our team will follow up with more details.
+        </p>
+
+        <form class="contact-form" action="#" method="post">
+          <!-- Replace action with a real form handler if needed -->
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" />
+
+          <label for="company">Company (optional)</label>
+          <input id="company" name="company" type="text" placeholder="Your business name" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" />
+
+          <label for="type">I am interested in</label>
+          <select id="type" name="type">
+            <option value="">Select one</option>
+            <option value="wfh">Work From Home Opportunities</option>
+            <option value="business">Call Center Services for My Business</option>
+            <option value="both">Both</option>
+          </select>
+
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" placeholder="Tell us about your needs..."></textarea>
+
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="about-image">
+          <!-- 4th diverse image or collage -->
+          <img src="4.png" alt="Diverse remote and call center professionals" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>&copy; <span id="year"></span> W&amp;D Business Solutions. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#wfh">Work From Home</a>
+        <a href="#services">Solutions</a>
+        <a href="#industries">Industries</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Update footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
